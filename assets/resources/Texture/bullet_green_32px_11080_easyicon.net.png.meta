@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "cb025851-26af-442f-bd15-b1581a498db6",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "bullet_green_32px_11080_easyicon.net": {
+      "ver": "1.0.3",
+      "uuid": "66174db7-be3d-4892-aab0-eb4afc5de5e0",
+      "rawTextureUuid": "cb025851-26af-442f-bd15-b1581a498db6",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -1,
+      "trimX": 8,
+      "trimY": 9,
+      "width": 16,
+      "height": 16,
+      "rawWidth": 32,
+      "rawHeight": 32,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,23 @@
+window.EventCode = cc.Class({
+    statics: {
+        InitGame: 1,
+        UpdateSurvivalTime: 2,
+        HeroMoveInput: 3,
+        HeroMove: 4,
+        AddToEntityLayer: 5,
+        AddToUILayer: 6,
+        BulletRelease: 7,
+        OverGame: 8,
+        ShowOverTip: 9,
+        ReStartGame: 10,
+        ClearEntity: 11,
+        ResumeGame: 12,
+        PauseGame: 13,
+        BulletBoom: 14,
+        BombRelease: 15,
+        GetShield: 16,
+        ShieldEffectStart: 17,
+        ShieldEffectEnd: 18,
+        GetDart: 19,
+    },
+});

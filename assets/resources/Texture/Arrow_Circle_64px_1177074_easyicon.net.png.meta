@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "0c2188d3-dbf8-4ce6-a8b3-4ca3ec68dcbd",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Arrow_Circle_64px_1177074_easyicon.net": {
+      "ver": "1.0.3",
+      "uuid": "965e1d30-1fb6-43cb-95dc-5f44614eb54e",
+      "rawTextureUuid": "0c2188d3-dbf8-4ce6-a8b3-4ca3ec68dcbd",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 2,
+      "width": 64,
+      "height": 60,
+      "rawWidth": 64,
+      "rawHeight": 64,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
