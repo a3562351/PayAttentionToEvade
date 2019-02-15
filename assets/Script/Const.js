@@ -1,6 +1,6 @@
 window.Const = cc.Class({
     statics: {
-        AreaSize: {x: 540, y: 960},
+        AreaSize: {x: 640, y: 960},
         Tag:{
             Hero: 1,
             Bullet: 2,

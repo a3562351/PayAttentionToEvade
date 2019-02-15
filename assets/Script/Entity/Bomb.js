@@ -14,8 +14,6 @@ cc.Class({
             if(!this.mGameManager.HaveEffect(Const.Effect.Shield)){
                 EventDispatcher.Dispatch(EventCode.OverGame);
             }
-        }else if(other.node.tag === Const.Tag.Goods){
-
         }
     },
 

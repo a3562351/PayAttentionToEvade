@@ -16,7 +16,7 @@ cc.Class({
             }
         }else if(other.node.tag === Const.Tag.Bullet){
             other.getComponent("Bullet").Release();
-            this.Release();            
+            this.Release();
             EventDispatcher.Dispatch(EventCode.BulletBoom, this.node.getPosition());
         }
     },

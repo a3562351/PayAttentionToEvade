@@ -11,8 +11,11 @@ cc.Class({
         this.mSurvivalTime = 0;
         this.mIsRunning = false;
         this.mHero = null;
+        this.mAudioSource = null;
         this.mCreateBulletInterval = 0.2;
-        this.mCreateGoodsInterval = 5;
+        this.mCreateGoodsInterval = 10;
+        this.mIncreaseTime = 60;
+        this.mMixIntervalRatio = 1/4;
 
         let self = this;
 
@@ -62,6 +65,7 @@ cc.Class({
     onLoad() {
         this.AddEventListen();
 
+        this.mAudioSource = this.getComponent("cc.AudioSource");
         cc.game.addPersistRootNode(this.node);
 
         cc.director.getCollisionManager().enabled = true;
@@ -72,15 +76,28 @@ cc.Class({
             this.UpdateSurvivalTime(this.mSurvivalTime += dt);
             this.CheckCreateEntity(dt);
             this.mEffectManager.Update(dt);
+
+            if(this.mSurvivalTime <= this.mIncreaseTime){
+                let interval = this.mMixInterval + (this.mCreateBulletInterval - this.mMixInterval) * (1 - Math.sin(this.mSurvivalTime/this.mIncreaseTime * Math.PI/2));
+                this.mBulletCreator.SetCreateInterval(this.GetIntervalTime(this.mCreateBulletInterval));
+                this.mGoodsCreator.SetCreateInterval(this.GetIntervalTime(this.mCreateGoodsInterval));
+            }
         }
+    },
+
+    GetIntervalTime(interval){
+        let mixInterval = interval * this.mMixIntervalRatio;
+        let nowInterval = mixInterval + (interval - mixInterval) * (1 - Math.sin(this.mSurvivalTime/this.mIncreaseTime * Math.PI/2));        
+        return nowInterval;
     },
 
     InitGame(){
         let self = this;
         cc.director.loadScene("Game", function(){
             self.StartGame();
+            self.mAudioSource.play();
+            console.log("Init Game!");
         })
-        console.log("Init Game!");
     },
 
     StartGame(){
@@ -232,7 +249,7 @@ cc.Class({
     },
 
     BulletBoom(pos){       
-        let count = 8;
+        let count = 5;
         let angle =  Math.random();
         this.mBombCreator.CreateEntity(count, function(bomb, idx){
             let direction = Math.PI * 2 * (idx / count + angle);

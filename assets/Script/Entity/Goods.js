@@ -5,8 +5,8 @@ cc.Class({
 
     properties: {
         GoodsType: 1,
-        Time: 3,        //效果持续事件
-        Times: 10,      //效果持续反弹次数
+        Time: 2,        //效果持续事件
+        Times: 5,      //效果持续反弹次数
         Count: 5,       //创建个数
     },
 
